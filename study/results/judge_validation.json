@@ -1,0 +1,1 @@
+{"n": 300, "agree": 0.97, "kappa": 0.9382207578253707, "n_disagree": 9, "deepseek_acc_vs_ref": 0.98, "sonnet_acc_vs_ref": 0.99, "base_rate_correct": 0.41333333333333333}

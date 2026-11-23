@@ -1,0 +1,329 @@
+{
+ "n_rows": 123487,
+ "n_unjudged": 0,
+ "n_presence_missing": 0,
+ "H1_model_terms": {
+  "Intercept": 0.1762117263789789,
+  "C(retriever)[T.PPR]": -0.6561052521994393,
+  "C(qtype)[T.comparison]": 2.1826039913806703,
+  "C(qtype)[T.compositional]": -52.899296356354,
+  "C(qtype)[T.inference]": -8133583.622213151,
+  "r_ENT_DEL": -10.5701628025339,
+  "r_EDGE_DEL": -5.3922494465992905,
+  "r_SPLIT": -2.3512581583967904,
+  "r_MERGE": -3.325517106402147,
+  "r_REL_CORRUPT": -4.282848286513931,
+  "r_SPURIOUS": 0.11878559850208867,
+  "prov": 0.5062496615365596
+ },
+ "H2_shapley_haiku": {
+  "graph": 0.8341657168198886,
+  "retriever": 0.08363828950848434,
+  "prov": 0.035484989286650184,
+  "total_R2": 0.9532889956150233
+ },
+ "H2_shapley_generators": {
+  "graph": 0.9721846039042092,
+  "model": 0.0012847008117729541,
+  "prov": 0.012717169903539697,
+  "total_R2": 0.9861864746195219
+ },
+ "H2_shapley_all5": {
+  "graph": 0.96619712696036,
+  "model": 0.0025041511385175217,
+  "prov": 0.016621014125872153,
+  "total_R2": 0.9853222922247497
+ },
+ "H2_mcfadden_haiku": {
+  "graph": 0.06658750318778706,
+  "retriever": 0.006655359076117473,
+  "prov": 0.0028204147203411134,
+  "qtype": 0.049275443038190536
+ },
+ "H4_chi2": {
+  "chi2": 1974.2233014611402,
+  "dof": 3,
+  "p": 0.0
+ },
+ "H4_wrong_share": {
+  "commission": {
+   "abstain": 0.7854036679901683,
+   "adopted": 0.10550198525241067,
+   "wrong": 0.10909434675742107
+  },
+  "omission": {
+   "abstain": 0.9721309320362824,
+   "adopted": NaN,
+   "wrong": 0.027869067963717627
+  }
+ },
+ "H5_terms": {
+  "prov_i": {
+   "coef": 0.2045372026504363,
+   "p": 7.990921136117079e-08
+  },
+  "rate:prov_i": {
+   "coef": 0.8483970453587638,
+   "p": 1.8007589739608011e-12
+  },
+  "commission:prov_i": {
+   "coef": -0.10755098820655139,
+   "p": 0.003845566757126523
+  },
+  "rate:commission:prov_i": {
+   "coef": -0.42648272636815876,
+   "p": 0.0019801773482629715
+  }
+ },
+ "H5_adoption_prov": {
+  "coef": -0.8977908451742728,
+  "p": 3.083163443346055e-28,
+  "OR": 0.40746882790156125
+ },
+ "H6_acc_by_model_cond": {
+  "Claude Haiku 4.5": {
+   "clean": 0.8908333333333334,
+   "commission": 0.7102777777777778,
+   "omission": 0.4905555555555556
+  },
+  "Claude Sonnet 4.6": {
+   "clean": 0.8991666666666667,
+   "commission": 0.7213888888888889,
+   "omission": 0.5052777777777778
+  },
+  "Gemma 4 31B": {
+   "clean": 0.8882402001668057,
+   "commission": 0.7006121313299944,
+   "omission": 0.49315451243364067
+  },
+  "gpt-oss-120b": {
+   "clean": 0.8866666666666667,
+   "commission": 0.6895296752519597,
+   "omission": 0.4725
+  },
+  "gpt-oss-20b": {
+   "clean": 0.8816666666666667,
+   "commission": 0.6948539638386648,
+   "omission": 0.47887715397443026
+  }
+ },
+ "H6_interaction_p": {
+  "C(model_name)[T.Claude Sonnet 4.6]:commission": 0.8879320928757074,
+  "C(model_name)[T.Gemma 4 31B]:commission": 0.07875798699875979,
+  "C(model_name)[T.gpt-oss-120b]:commission": 0.4429857158161751,
+  "C(model_name)[T.gpt-oss-20b]:commission": 0.25332932643828765
+ },
+ "H6_med_by_model": [
+  {
+   "model": "Claude Haiku 4.5",
+   "op": "EDGE_DEL",
+   "drop": 0.41000000000000003,
+   "retrieval": 0.45921878744308664,
+   "generation": -0.04921878744308658
+  },
+  {
+   "model": "Claude Haiku 4.5",
+   "op": "ENT_DEL",
+   "drop": 0.5941666666666667,
+   "retrieval": 0.5611079559070213,
+   "generation": 0.03305871075964528
+  },
+  {
+   "model": "Claude Haiku 4.5",
+   "op": "MERGE",
+   "drop": 0.20666666666666672,
+   "retrieval": 0.13059034267912778,
+   "generation": 0.07607632398753894
+  },
+  {
+   "model": "Claude Haiku 4.5",
+   "op": "REL_CORRUPT",
+   "drop": 0.3341666666666667,
+   "retrieval": 0.21382374790318723,
+   "generation": 0.1203429187634795
+  },
+  {
+   "model": "Claude Haiku 4.5",
+   "op": "SPLIT",
+   "drop": 0.1966666666666667,
+   "retrieval": 0.20951857177090827,
+   "generation": -0.01285190510424157
+  },
+  {
+   "model": "Claude Haiku 4.5",
+   "op": "SPURIOUS",
+   "drop": 0.0008333333333333526,
+   "retrieval": 0.002870117421519357,
+   "generation": -0.0020367840881860048
+  },
+  {
+   "model": "Claude Sonnet 4.6",
+   "op": "EDGE_DEL",
+   "drop": 0.39749999999999996,
+   "retrieval": 0.450400191708603,
+   "generation": -0.05290019170860308
+  },
+  {
+   "model": "Claude Sonnet 4.6",
+   "op": "ENT_DEL",
+   "drop": 0.5924999999999999,
+   "retrieval": 0.5503327342439492,
+   "generation": 0.042167265756050676
+  },
+  {
+   "model": "Claude Sonnet 4.6",
+   "op": "MERGE",
+   "drop": 0.19583333333333325,
+   "retrieval": 0.12808255451713402,
+   "generation": 0.06775077881619923
+  },
+  {
+   "model": "Claude Sonnet 4.6",
+   "op": "REL_CORRUPT",
+   "drop": 0.33833333333333326,
+   "retrieval": 0.2097175892643183,
+   "generation": 0.12861574406901496
+  },
+  {
+   "model": "Claude Sonnet 4.6",
+   "op": "SPLIT",
+   "drop": 0.1916666666666666,
+   "retrieval": 0.20549508746705014,
+   "generation": -0.013828420800383545
+  },
+  {
+   "model": "Claude Sonnet 4.6",
+   "op": "SPURIOUS",
+   "drop": -0.0008333333333333526,
+   "retrieval": 0.0028150011981788333,
+   "generation": -0.0036483345315121863
+  },
+  {
+   "model": "Gemma 4 31B",
+   "op": "EDGE_DEL",
+   "drop": 0.39810264810264806,
+   "retrieval": 0.45962508919232875,
+   "generation": -0.06152244108968066
+  },
+  {
+   "model": "Gemma 4 31B",
+   "op": "ENT_DEL",
+   "drop": 0.593452380952381,
+   "retrieval": 0.5650287088914212,
+   "generation": 0.028423672060959748
+  },
+  {
+   "model": "Gemma 4 31B",
+   "op": "MERGE",
+   "drop": 0.20851419031719537,
+   "retrieval": 0.1315809586093616,
+   "generation": 0.07693323170783377
+  },
+  {
+   "model": "Gemma 4 31B",
+   "op": "REL_CORRUPT",
+   "drop": 0.3573139236535165,
+   "retrieval": 0.21545888913945682,
+   "generation": 0.14185503451405967
+  },
+  {
+   "model": "Gemma 4 31B",
+   "op": "SPLIT",
+   "drop": 0.19421491075730246,
+   "retrieval": 0.2113677795202968,
+   "generation": -0.01715286876299435
+  },
+  {
+   "model": "Gemma 4 31B",
+   "op": "SPURIOUS",
+   "drop": -0.0016708449422392913,
+   "retrieval": 0.002893860509408124,
+   "generation": -0.004564705451647415
+  },
+  {
+   "model": "gpt-oss-120b",
+   "op": "EDGE_DEL",
+   "drop": 0.43166666666666664,
+   "retrieval": 0.45672657560508034,
+   "generation": -0.025059908938413672
+  },
+  {
+   "model": "gpt-oss-120b",
+   "op": "ENT_DEL",
+   "drop": 0.6041666666666666,
+   "retrieval": 0.5580627845674575,
+   "generation": 0.046103882099209126
+  },
+  {
+   "model": "gpt-oss-120b",
+   "op": "MERGE",
+   "drop": 0.21970005750945,
+   "retrieval": 0.13007004491106655,
+   "generation": 0.08963001259838342
+  },
+  {
+   "model": "gpt-oss-120b",
+   "op": "REL_CORRUPT",
+   "drop": 0.362876254180602,
+   "retrieval": 0.21265538034850373,
+   "generation": 0.15022087383209826
+  },
+  {
+   "model": "gpt-oss-120b",
+   "op": "SPLIT",
+   "drop": 0.20666666666666667,
+   "retrieval": 0.20838150011981793,
+   "generation": -0.0017148334531512655
+  },
+  {
+   "model": "gpt-oss-120b",
+   "op": "SPURIOUS",
+   "drop": 0.005139509185505764,
+   "retrieval": 0.0029015655086693107,
+   "generation": 0.0022379436768364533
+  },
+  {
+   "model": "gpt-oss-20b",
+   "op": "EDGE_DEL",
+   "drop": 0.4161213132999444,
+   "retrieval": 0.4629467836601221,
+   "generation": -0.0468254703601777
+  },
+  {
+   "model": "gpt-oss-20b",
+   "op": "ENT_DEL",
+   "drop": 0.5954702281580412,
+   "retrieval": 0.5656631012847116,
+   "generation": 0.029807126873329537
+  },
+  {
+   "model": "gpt-oss-20b",
+   "op": "MERGE",
+   "drop": 0.201505016722408,
+   "retrieval": 0.13207439432253854,
+   "generation": 0.06943062239986945
+  },
+  {
+   "model": "gpt-oss-20b",
+   "op": "REL_CORRUPT",
+   "drop": 0.35278241513633835,
+   "retrieval": 0.21573375750583337,
+   "generation": 0.13704865763050497
+  },
+  {
+   "model": "gpt-oss-20b",
+   "op": "SPLIT",
+   "drop": 0.19833333333333342,
+   "retrieval": 0.2112154325425354,
+   "generation": -0.012882099209201983
+  },
+  {
+   "model": "gpt-oss-20b",
+   "op": "SPURIOUS",
+   "drop": 0.005833333333333357,
+   "retrieval": 0.0028933620896238387,
+   "generation": 0.0029399712437095187
+  }
+ ],
+ "n_clean_answerable": 535
+}
